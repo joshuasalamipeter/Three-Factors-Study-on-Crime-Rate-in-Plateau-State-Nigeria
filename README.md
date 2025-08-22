@@ -1,4 +1,4 @@
-# 📊 Crime Rate Analysis Using Three Factor Study in R
+# 📊 Crime Rate Analysis Using Three Factors Study
 
 [![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=R&logoColor=white)](https://www.r-project.org/)  
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)

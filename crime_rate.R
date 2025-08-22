@@ -74,9 +74,17 @@ interaction.plot(df$Substance_Abuse, df$Employment_Status, df$Crime_Rate_per_100
                  ylab = "Mean Crime Rate per 1000",
                  xlab = "Substance Abuse", trace.label = "Employment Status")
 
+interaction.plot(df$Substance_Abuse, df$Population_Density, df$Crime_Rate_per_1000,
+                 col = c("red", "blue"), lwd = 2,
+                 ylab = "Mean Crime Rate per 1000",
+                 xlab = "Substance Abuse", trace.label = "Population Density")
+
+interaction.plot(df$Employment_Status, df$Population_Density, df$Crime_Rate_per_1000,
+                 col = c("red", "blue"), lwd = 2,
+                 ylab = "Mean Crime Rate per 1000",
+                 xlab = "Employment Status", trace.label = "Population Density")
 
 # 3-Way Interaction Means
-
 emm <- emmeans(model, ~ Substance_Abuse * Employment_Status * Population_Density)
 plot(emm)
 
@@ -95,5 +103,6 @@ print(LSD.test(model, c("Employment_Status", "Population_Density"), p.adj = "non
 
 # Three-way Interaction
 print(LSD.test(model, c("Substance_Abuse", "Employment_Status", "Population_Density"), p.adj = "none"))
+
 
 

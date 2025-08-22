@@ -81,7 +81,7 @@ emm <- emmeans(model, ~ Substance_Abuse * Employment_Status * Population_Density
 plot(emm)
 
 
-# 3. LSD Post Hoc Tests
+# LSD Post Hoc Tests
 
 # Main Effects
 print(LSD.test(model, "Substance_Abuse", p.adj = "none"))
@@ -95,4 +95,5 @@ print(LSD.test(model, c("Employment_Status", "Population_Density"), p.adj = "non
 
 # Three-way Interaction
 print(LSD.test(model, c("Substance_Abuse", "Employment_Status", "Population_Density"), p.adj = "none"))
+
 
